@@ -10,7 +10,7 @@ import React, { useEffect, useRef } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
 import * as THREE from "three"
 
-export function Iphone3d(props) {
+ function Iphone3d(props) {
   const { nodes, materials } = useGLTF('/models/scene.glb')
   const texture = useTexture(props.item.img);
 
@@ -256,3 +256,4 @@ export function Iphone3d(props) {
 }
 
 useGLTF.preload('/models/scene.glb')
+export default Iphone3d
